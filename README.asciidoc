@@ -3,6 +3,40 @@
 :sectnums:
 :source-highlighter: pygments
 
+== Pipeline
+
+=== Shader stages
+.Shader stage concepts
+[cols="^s,^s,^s"]
+|===
+| Vulkan | OpenGL | Direct3D 11
+
+| https://www.khronos.org/registry/vulkan/specs/1.0-wsi_extensions/html/vkspec.html#pipelines[Input Assembler]
+| https://www.khronos.org/opengl/wiki/Primitive_Assembly[Primitive Assembly]
+| https://msdn.microsoft.com/en-us/library/windows/desktop/bb205116(v=vs.85).aspx[Input-Assembler]
+
+| https://www.khronos.org/registry/vulkan/specs/1.0-wsi_extensions/html/vkspec.html#pipelines[Vertext Shader]
+| https://www.khronos.org/opengl/wiki/Vertex_Shader[Vertex Shader]
+| https://msdn.microsoft.com/en-us/library/windows/desktop/mt787172(v=vs.85).aspx[Vertex Shader]
+
+| https://www.khronos.org/registry/vulkan/specs/1.0-wsi_extensions/html/vkspec.html#pipelines[Tessllation Control Shader]
+| https://www.khronos.org/opengl/wiki/Tessellation_Control_Shader[Tessellation Control Shader]
+| https://msdn.microsoft.com/en-us/library/windows/desktop/ff476340(v=vs.85).aspx#Hull_Shader_Stage[Hull Shader]
+
+| https://www.khronos.org/registry/vulkan/specs/1.0-wsi_extensions/html/vkspec.html#pipelines[Tessllation Evaluation Shader]
+| https://www.khronos.org/opengl/wiki/Tessellation_Evaluation_Shader[Tessellation Evaluation Shader]
+| https://msdn.microsoft.com/en-us/library/windows/desktop/ff476340(v=vs.85).aspx#Domain_Shader_Stage[Domain Shader]
+
+| https://www.khronos.org/registry/vulkan/specs/1.0-wsi_extensions/html/vkspec.html#pipelines[Geometry Shader]
+| https://www.khronos.org/opengl/wiki/Geometry_Shader[Geometry Shader]
+| https://msdn.microsoft.com/en-us/library/windows/desktop/mt787170(v=vs.85).aspx[Geometry Shader]
+
+| https://www.khronos.org/registry/vulkan/specs/1.0-wsi_extensions/html/vkspec.html#pipelines[Fragment Shader]
+| https://www.khronos.org/opengl/wiki/Fragment_Shader[Fragment Shader]
+| https://msdn.microsoft.com/en-us/library/windows/desktop/mt787171(v=vs.85).aspx[Pixel Shader]
+
+|===
+
 == Buffer
 
 === Read-only buffer
@@ -93,3 +127,7 @@ layout (set=m, binding=n) buffer TBuffer { ... }
 ----
 
 |===
+
+== References
+
+* http://computergraphics.stackexchange.com/questions/4422/directx-openglvulkan-concepts-mapping-chart

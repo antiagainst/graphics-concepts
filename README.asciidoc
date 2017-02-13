@@ -1,0 +1,95 @@
+= Graphics Concepts
+
+:sectnums:
+:source-highlighter: pygments
+
+== Buffer
+
+=== Read-only buffer
+
+.Read-only buffer concepts
+[cols="^s,^s,^s"]
+|===
+| Vulkan | OpenGL | Direct3D 11
+
+| https://www.khronos.org/registry/vulkan/specs/1.0-wsi_extensions/html/vkspec.html#descriptorsets-uniformbuffer[Uniform Buffer]
+| https://www.khronos.org/opengl/wiki/Uniform_Buffer_Object[Uniform Buffer Object (UBO)]
+| https://msdn.microsoft.com/en-us/library/windows/desktop/ff476898(v=vs.85).aspx#Shader_Constant_Buffer[Constant Buffer]
+
+|===
+
+.Read-only buffer source code
+[cols="^1h,9a"]
+|===
+
+| GLSL (Vulkan)
+|
+[source,glsl]
+----
+layout (set=m, binding=n) uniform TBuffer { ... }
+----
+
+| HLSL
+|
+[source,hlsl]
+----
+cbuffer TBuffer { ... }
+----
+
+| SPIR-V
+|
+[source,spirv]
+----
+           OpDecorate %TBuffer Block
+           OpDecorate %Object DescriptorSet m
+           OpDecorate %Object Binding n
+%TBuffer = OpTypeStruct ...
+%PBuffer = OpTypePointer Uniform %TBuffer
+ %Object = OpVariable %PBuffer Uniform
+----
+
+|===
+
+=== Read-write buffer
+
+.Read-write buffer concepts
+[cols="^s,^s,^s"]
+|===
+| Vulkan | OpenGL | Direct3D 11
+
+| https://www.khronos.org/registry/vulkan/specs/1.0-wsi_extensions/html/vkspec.html#descriptorsets-storagebuffer[Storage Buffer]
+| https://www.khronos.org/opengl/wiki/Shader_Storage_Buffer_Object[Shader Storage Buffer Object (SSBO)]
+|
+
+|===
+
+.Read-write buffer source code
+[cols="^1h,9a"]
+|===
+
+| GLSL (Vulkan)
+|
+[source,glsl]
+----
+layout (set=m, binding=n) buffer TBuffer { ... }
+----
+
+| HLSL
+|
+[source,hlsl]
+----
+----
+
+| SPIR-V
+|
+[source,spirv]
+----
+           OpDecorate %TBuffer BufferBlock
+           OpDecorate %Object DescriptorSet m
+           OpDecorate %Object Binding n
+%TBuffer = OpTypeStruct ...
+%PBuffer = OpTypePointer Uniform %TBuffer
+ %Object = OpVariable %PBuffer Uniform
+----
+
+|===

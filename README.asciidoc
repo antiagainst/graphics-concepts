@@ -10,13 +10,13 @@
 |===
 |Vulkan | OpenGL | Direct3D 11
 
-| https://www.khronos.org/registry/vulkan/specs/1.0-wsi_extensions/html/vkspec.html#interfaces[Shader interfaces]
-| https://www.khronos.org/opengl/wiki/Type_Qualifier_(GLSL)#Storage_qualifiers[Shader stage inputs and outputs]
-| https://msdn.microsoft.com/en-us/library/windows/desktop/bb509647(v=vs.85).aspx[Semantics]
+| https://www.khronos.org/registry/vulkan/specs/1.0-wsi_extensions/html/vkspec.html#interfaces[Shader interface]
+| https://www.khronos.org/opengl/wiki/Type_Qualifier_(GLSL)#Storage_qualifiers[Shader stage input and output]
+| https://msdn.microsoft.com/en-us/library/windows/desktop/bb509647(v=vs.85).aspx[Semantic]
 
-| https://www.khronos.org/registry/vulkan/specs/1.0-wsi_extensions/html/vkspec.html#descriptorsets-sets[Descriptor set and binding numbers]
-| https://www.khronos.org/opengl/wiki/Layout_Qualifier_(GLSL)#Binding_points[Binding points]
-| https://msdn.microsoft.com/en-us/library/windows/desktop/dd607359(v=vs.85).aspx[Registers]
+| https://www.khronos.org/registry/vulkan/specs/1.0-wsi_extensions/html/vkspec.html#descriptorsets-sets[Descriptor set and binding number]
+| https://www.khronos.org/opengl/wiki/Layout_Qualifier_(GLSL)#Binding_points[Binding point]
+| https://msdn.microsoft.com/en-us/library/windows/desktop/dd607359(v=vs.85).aspx[Register]
 
 |===
 
